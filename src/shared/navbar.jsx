@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#E4E4E7]">
+    <nav className="bg-[#E4E4E7]/50 lg:pb-[24px]">
       <div className="max-w-[1269px] mx-auto pt-[23px] pb-[15px] px-6 lg:px-0">
         <div className="flex justify-between items-center">
           <Link to="/">
@@ -72,7 +72,7 @@ export default function Navbar() {
               transition={{ duration: 0.4 }}
               className="flex flex-col gap-4 mt-9 lg:hidden overflow-hidden"
             >
-              <div className="flex md:hidden justify-center sm:justify-end items-center pb-3 gap-[9px]">
+              <div className="flex md:hidden justify-start sm:justify-end items-center pb-3 gap-[9px]">
                 <img src={logo1} alt="Notification" />
                 <img src={logo2} alt="User's Photo" />
                 <div>
@@ -105,7 +105,7 @@ export default function Navbar() {
       </div>
 
       {/* Bottom border line */}
-      <div className="max-w-[1440px] h-[1px] rounded-lg bg-[#3F3F46] -mt-[1px]"></div>
+      <div className="max-w-[1440px] h-[1px] rounded-lg bg-zinc-200 -mt-[1px]"></div>
     </nav>
   );
 }
