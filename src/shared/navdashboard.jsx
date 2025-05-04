@@ -13,17 +13,17 @@ const Navdashboard = () => {
           <Title>Dashboard</Title>
         </div>
         <div className="flex flex-wrap gap-[14px]  ">
-          <div>
-            <div className="text-[#71717A] text-sm flex items-center justify-center border border-[#E4E4E7]  gap-[5px] pl-[10px] active:ring-2 hover:ring-2  max-w-[190px]   rounded-[6px] bg-[#FAFAFA]/50 ">
-              <Search className="size-[18px]" />
+          <div className="">
+            <div className="text-[#71717A] text-sm flex items-center justify-center border border-[#E4E4E7]  gap-[5px] pl-[10px] active:ring-2 hover:ring-2  max-w-[190px]   rounded-[6px] bg-[#FAFAFA] ">
+              <Search className="size-[18px] " />
               <input
                 placeholder="Search incident"
                 type="text"
-                className=" outline-none py-[0px] max-w-[157px]  h-[42px] bg-[#FAFAFA]/50"
+                className=" rounded-[6px] outline-none py-[0px] max-w-[157px]  h-[42px] bg-[#FAFAFA]"
               />
             </div>
           </div>
-          <button className="w-[148px] h-[42px] bg-[#FAFAFA]/50 border border-[#E4E4E7] rounded-[6px] text-[12px] text-[#A1A1AA] active:scale-95 transition-all shadow ">
+          <button className="w-[148px] h-[42px] bg-[#FAFAFA] border border-[#E4E4E7] rounded-[6px] text-[12px] text-[#A1A1AA] active:scale-95 transition-all  ">
             Sort By: Date modified
           </button>
           <Button className="lg:py-0 w-full  px-[25px] lg:h-[42px] md:w-fit ">

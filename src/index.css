@@ -8,7 +8,10 @@
     font-family: "Onest", sans-serif;
 };
 
-
+img {
+  transform: var(--transform, translate(0, 0) scale(1));
+  transform-origin: var(--x, 50%) var(--y, 50%);
+}
 
   @layer utilities {
     /* .container {
