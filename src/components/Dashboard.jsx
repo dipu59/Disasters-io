@@ -39,15 +39,21 @@ function Dashboard() {
       {/* Troggoler Button */}
       <button
         onClick={toggoleChat}
-        className=" active:scale-95 transition-all md:size-20 size-16 rounded-full bg-[#F26922] flex md:top-[940px] bottom-10 right-5 md:right-16 lg:right-auto justify-center items-center cursor-pointer  lg:ml-[1193px] lg:top-[557px] fixed "
+        className={
+          !isOpen
+            ? " active:scale-95 transition-all md:size-20 size-16 rounded-full bg-[#F26922] flex md:top-[940px] bottom-10 right-5 md:right-16 lg:right-auto justify-center items-center cursor-pointer  lg:ml-[1193px] lg:top-[557px] fixed"
+            : "active:scale-95 transition-all md:size-20 size-16 rounded-full bg-[#FAFAFA] flex md:top-[940px] bottom-10 right-5 md:right-16 lg:right-auto justify-center items-center cursor-pointer  ButtonShadow lg:ml-[1193px] lg:top-[557px] fixed"
+        }
       >
-        <button
-          aria-checked={isOpen}
-          role="Swich"
-          className=" text-[30px] md:text-[55px] text-white "
+        <span
+          className={
+            !isOpen
+              ? " text-[30px] md:text-[55px] text-white"
+              : " text-[30px] md:text-[55px] text-black"
+          }
         >
           {isOpen ? "✖" : "C"}
-        </button>
+        </span>
       </button>
 
       {/* Chat Box */}
@@ -58,7 +64,7 @@ function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.3 }}
-            className="w-[331px] fixed h-[475px] rounded-[12px] md:ml-[350px] bottom-32 ml-5 md:top-[440px] lg:ml-[835px] lg:top-[125px] bg-[#F4F4F5]    overflow-y-auto overscroll-none scroll-auto "
+            className="w-[331px] fixed h-[475px] rounded-[12px] md:ml-[350px] bottom-32  ml-12 md:top-[440px] lg:ml-[835px] lg:top-[125px] bg-[#F4F4F5]    overflow-y-auto overscroll-none scroll-auto "
           >
             <div className="h-[63px] w-full bg-[#F26922] rounded-t-[12px]  ">
               <h2 className="text-base font-bold text-[#FAFAFA] pl-[15px] py-[25px]  ">
