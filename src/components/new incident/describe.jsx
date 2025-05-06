@@ -5,8 +5,8 @@ import { Disc } from '../../common/disc'
 
 function Describe() {
   return (
-      <section className='mb-96'>
-          <NewIncident to2='/incidents/step2' />
+      <section className='mb-96'  >
+          <NewIncident to2='/incidents/step2' to='/incidents/step4' />
           <div className='max-w-[752px] h-[366px] mx-auto mt-[40px] px-4 lg:px-0 '>
               <Title className='text-[24px] mb-[12px]'>Let’s give the incident a title?</Title>
               <Disc className='text-sm mb-[24px]'>Make a title that will easily identify the incidents</Disc>
