@@ -8,7 +8,7 @@ function Incedents() {
     }
   return (
     <section>
-      <Dashboard titleText="Incedents" Icon={Plus} buttonText=" New Incident" disc="Home - Incedents" onClick={click} />
+      <Dashboard titleText="Incedents" Icon={Plus} buttonText=" New Incident" disc="Home - Incedents" onClick={click} to='/incidents/step1' />
     </section>
   );
 }

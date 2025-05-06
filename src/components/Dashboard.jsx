@@ -8,7 +8,7 @@ import { Camera, Image, Link } from "lucide-react";
 import { Button } from "../common/button";
 import { AnimatePresence, motion } from "framer-motion";
 import Navdashboard from "../shared/navdashboard";
-function Dashboard({titleText='Dashboard', buttonText=' Cypher AI', disc='Welcome Back', Icon= null, onClick }) {
+function Dashboard({titleText='Dashboard', buttonText=' Cypher AI', disc='Welcome Back', Icon= null, onClick, to }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggoleChat = () => {
@@ -16,7 +16,7 @@ function Dashboard({titleText='Dashboard', buttonText=' Cypher AI', disc='Welcom
   };
   return (
     <>
-      <Navdashboard titleText={titleText} onClick={onClick} buttonText={buttonText} disc={disc} Icon={Icon} />
+      <Navdashboard titleText={titleText} onClick={onClick} buttonText={buttonText} disc={disc} Icon={Icon} to={to}  />
     <main className="max-w-[1300px] mx-auto h-auto bg-white pb-[150px] ">
       <ul className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 mt-[40px] mb-[77px] ">
         {DashboardInfo.map((items, i) => (

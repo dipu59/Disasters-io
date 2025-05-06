@@ -3,8 +3,9 @@ import { Disc } from "../common/disc";
 import { Title } from "../common/title";
 import { Plus, Search } from "lucide-react";
 import { Button } from "../common/button";
+import { Link } from "react-router-dom";
 
-const Navdashboard = ({titleText='Dashboard', buttonText=' Cypher AI', disc='Welcome Back', Icon: Icon, onClick}) => {
+const Navdashboard = ({titleText='Dashboard', buttonText=' Cypher AI', disc='Welcome Back', Icon: Icon, onClick, ...props}) => {
   return (
     <main className=" bg-[#E4E4E780]/50 ">
       <div className=" max-w-[1268px] px-5 lg:px-0 mx-auto flex flex-col lg:flex-row lg:justify-between  lg:items-center pb-[23px]">
@@ -26,10 +27,12 @@ const Navdashboard = ({titleText='Dashboard', buttonText=' Cypher AI', disc='Wel
           <button  className="w-[148px] h-[42px] bg-[#FAFAFA] border border-[#E4E4E7] rounded-[6px] text-[12px] text-[#A1A1AA] active:scale-95 transition-all  ">
             Sort By: Date modified
           </button>
+          <Link {...props} className="flex w-full md:w-fit" >
           <Button onClick={onClick} className="lg:py-0 w-full  px-[25px] lg:h-[42px] md:w-fit flex justify-center items-center gap-1 ">
             <span> {Icon && <Plus className="w-4 h-4" strokeWidth='4px'  />}</span>
            {buttonText}
           </Button>
+          </Link>
         </div>
       </div>
     </main>
