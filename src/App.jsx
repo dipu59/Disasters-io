@@ -7,7 +7,7 @@ import Getstarted from "./components/new incident/getstarted";
 import IconDiscrive from "./components/new incident/icondiscribe";
 import Describe from "./components/new incident/describe";
 import Gps from "./components/new incident/gps";
-
+import Locations from "./components/Location";
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +21,7 @@ function App() {
           <Route path="/incidents/step2" element={<IconDiscrive />} />
           <Route path="/incidents/step3" element={<Describe />} />
           <Route path="/incidents/step4" element={<Gps />} />
+          <Route path="/locations" element={<Locations />} />
         </Routes>
       </main>
     </BrowserRouter>
