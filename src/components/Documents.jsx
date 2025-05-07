@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Title } from '../common/title';
 import { Disc } from '../common/disc';
-import { activeCard } from '../lib/database';
+import { documentsCard } from '../lib/database';
 
 
 
-const ActiveCards = () => {
+const DocumentsCard = () => {
   const [showAll, setShowAll] = useState(false);
-  const visibleCards = showAll ? activeCard : activeCard.slice(0, 2);
+  const visibleCards = showAll ? documentsCard : documentsCard.slice(0, 2);
 
   return (
-    <div className="px-3 lg:px-0 py-[40px] border-y border-y-[#E4E4E7] my-[40px]">
+    <div className="px-3 lg:px-0   mb-[40px]">
       <div className="flex justify-between items-center mb-4">
-        <Title className="text-base ">Actives</Title>
+        <Title className="text-base ">Documents</Title>
         {!showAll ? (
           <button
             onClick={() => setShowAll(true)}
@@ -31,7 +31,7 @@ const ActiveCards = () => {
       </div>
       <div className="grid  gap-[17px]">
         {visibleCards.map((location) => (
-          <div key={location.id} className="max-w-[679px]  hover:-translate-y-2 duration-300 cursor-pointer transition-all py-[15px] px-[10px] flex gap-3 items-center bg-[#F4F4F5] mx-auto w-full rounded-lg overflow-hidden ">
+          <div key={location.id} className="max-w-[679px] py-[15px] px-[10px] flex gap-3 items-center bg-[#F4F4F5] mx-auto w-full rounded-lg overflow-hidden ">
             <div className="">
               <img src={location.image} alt={location.title} className="size-[78px] rounded-[10px] object-cover" />
              
@@ -48,4 +48,4 @@ const ActiveCards = () => {
   );
 };
 
-export default ActiveCards;
+export default DocumentsCard;

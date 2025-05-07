@@ -18,7 +18,7 @@ const NewIncident = ({
     <main className=" bg-[#E4E4E780]/50 ">
       <div className=" max-w-[1268px] px-5 lg:px-0 mx-auto flex flex-col lg:flex-row lg:justify-between  lg:items-center items-start pb-[23px]">
         <div className="flex gap-3 items-center justify-center">
-          <Link to="/incidents/step1">
+          <Link to="/incidents">
             <div className="p-3 bg-[#FAFAFA] rounded-full size-[41px] border border-[#E4E4E7] cursor-pointer active:scale-95 transition-all duration-300 hover:animate-spin ">
               <X className="size-4 text-[#71717A]" />
             </div>

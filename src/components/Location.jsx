@@ -5,6 +5,7 @@ import { Disc } from "../common/disc";
 import { Title } from "../common/title";
 import Locations from "./Locationscards";
 import ActiveCards from "./Activecards";
+import DocumentsCard from "./Documents";
 
 function Location() {
   return (
@@ -18,7 +19,7 @@ function Location() {
       />
 
       <section className="max-w-[1300px] mx-auto px-3 lg:px-0  my-[40px] ">
-        <div className=" grid grid-cols-12 justify-between gap-4  ">
+        <div className=" grid grid-cols-12 justify-between gap-8  ">
           {/* Left side / Discription */}
           <div className=" col-span-12 lg:col-span-7 max-w-[680px]">
             {/* Location And Approx */}
@@ -40,7 +41,9 @@ function Location() {
               </div>
               <div>
                 <Disc>Approx. Cost:</Disc>
-                <Title className=" text-lg md:text-[20px]">$60,607,456.00</Title>
+                <Title className=" text-lg md:text-[20px]">
+                  $60,607,456.00
+                </Title>
               </div>
             </div>
 
@@ -60,6 +63,8 @@ function Location() {
             <Locations />
             {/* Actives Cards */}
             <ActiveCards />
+            {/* Documents Card */}
+            <DocumentsCard />
           </div>
 
           {/* Right side / Location image  */}
@@ -67,8 +72,8 @@ function Location() {
             <Disc className="mb-5">Incident Map</Disc>
             <img src="/map.png" alt="" />
             <div className="flex gap-6 mt-5">
-              <Disc className="">Start 19.1232, -118.233 </Disc>
-              <Disc> End 19.3245, -119.2323</Disc>
+              <Disc className="text-sm md:text-base">Start 19.1232, -118.233 </Disc>
+              <Disc className="text-sm md:text-base"> End 19.3245, -119.2323</Disc>
             </div>
           </div>
         </div>
